@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #F7EFE7;
+  --blush: #E8D2C4;
+  --dusty-rose: #C7A9A3;
+  --muted-mauve: #2A2228;
+  --mauve: #161215;
+  --plum: #0E0C0E;
+
+  --background: #0B090A;
+  --foreground: #F7EFE7;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-dusty-rose: var(--dusty-rose);
+  --color-muted-mauve: var(--muted-mauve);
+  --color-mauve: var(--mauve);
+  --color-plum: var(--plum);
+  --font-sans: var(--font-outfit);
+}
+
+* {
+  font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0B090A;
+  color: #F7EFE7;
+  font-family: var(--font-outfit), sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism using luxury obsidian palette */
+.glass-pill {
+  background: rgba(14, 12, 14, 0.85);
+  border: 1px solid rgba(247, 239, 231, 0.15);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.7);
+}
+
+.glass-pill:hover {
+  border-color: rgba(232, 210, 196, 0.45);
+  background: rgba(26, 21, 25, 0.9);
+}
+
+.glass-card {
+  background: rgba(14, 12, 14, 0.9);
+  border: 1px solid rgba(247, 239, 231, 0.12);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.85);
+}
+
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom scrollbar matching palette */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B090A;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2228;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8D2C4;
+}
